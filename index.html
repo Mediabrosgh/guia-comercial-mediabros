@@ -129,6 +129,27 @@
   /* Objeciones */
   .obj td:first-child{font-weight:700;color:var(--navy);width:34%}
 
+  /* Escenarios */
+  .matrix td b{color:var(--navy)}
+  .matrix .opt{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;background:#F0F3F8;color:var(--ink-2);margin:1px 2px 1px 0;white-space:nowrap}
+  .matrix .opt.o1{background:var(--c1-soft);color:var(--c1)} .matrix .opt.o2{background:var(--c2-soft);color:var(--c2)} .matrix .opt.o3{background:var(--c3-soft);color:var(--c3)}
+  .combos{font-size:13px}
+  .combos th,.combos td{padding:8px 10px}
+  .combos td:first-child{font-weight:800;width:28px}
+  .combos .n1{color:var(--c1)} .combos .n2{color:var(--c2)} .combos .n3{color:var(--c3)} .combos .n0{color:#94A3B8}
+  .esc{padding:18px 20px 16px;border-left:5px solid var(--c);display:flex;flex-direction:column;gap:8px}
+  .esc[data-c="1"]{--c:var(--c1);--soft:var(--c1-soft)}
+  .esc[data-c="2"]{--c:var(--c2);--soft:var(--c2-soft)}
+  .esc[data-c="3"]{--c:var(--c3);--soft:var(--c3-soft)}
+  .esc[data-c="0"]{--c:#94A3B8;--soft:#F1F5F9}
+  .esc-head{display:flex;align-items:flex-start;gap:12px}
+  .esc-n{flex:none;width:30px;height:30px;border-radius:8px;background:var(--soft);color:var(--c);display:grid;place-items:center;font-weight:800;font-size:14px}
+  .esc-head h3{font-size:16.5px;flex:1;color:var(--navy)}
+  .esc-head .tag{flex:none;background:var(--soft);color:var(--c)}
+  .esc p b{color:var(--navy)}
+  .esc .num{font-size:13px;color:var(--ink-2);background:#FAFBFD;border:1px dashed var(--line);border-radius:8px;padding:8px 10px}
+  .esc .num b{color:var(--ink)}
+
   /* Callouts */
   .callout{padding:18px 22px;border-radius:12px;background:var(--warn-soft);border:1px solid #F5DDB8;color:#6B3F0B;display:grid;grid-template-columns:auto 1fr;gap:14px}
   .callout .ic{font-size:20px}
@@ -356,9 +377,147 @@
   </div>
 </section>
 
-<!-- 3. PRECIO -->
+<!-- 3. ESCENARIOS -->
+<section id="escenarios">
+  <div class="sec-head"><span class="n">03</span><div><h2>Escenarios: las combinaciones que aparecen en las calls</h2><p class="muted">Las tres preguntas del clasificador se combinan. Estos son los cruces que más se repitieron en 36 calls, con qué hacer en cada uno y un número orientativo del catálogo del 31/08 (USD, sin pauta; el número real sale del Cotizador).</p></div></div>
+
+  <div class="grid g2" style="margin-bottom:18px;align-items:start">
+    <div class="card table-wrap">
+      <table class="matrix">
+        <thead><tr><th>Variable</th><th>Qué mide</th><th>Opciones</th></tr></thead>
+        <tbody>
+          <tr><td><b>Delegación</b></td><td>Cuánto quiere delegar después de que dejemos todo funcionando</td><td><span class="opt o1">Delegador</span> <span class="opt o2">Híbrido</span> <span class="opt o3">Autónomo</span></td></tr>
+          <tr><td><b>Madurez</b></td><td>Qué tienen hecho hoy</td><td><span class="opt">Cero</span> <span class="opt">Parcial</span> <span class="opt">Avanzada</span></td></tr>
+          <tr><td><b>Compra</b></td><td>Quién decide y si está en la call</td><td><span class="opt">Decisor</span> <span class="opt">Intermediario</span> <span class="opt">Grupo</span></td></tr>
+        </tbody>
+      </table>
+      <p class="small muted" style="padding:10px 12px 12px">Delegación define el <b>camino</b>. Madurez define el <b>tamaño de la obra</b>. Compra define <b>cuándo cotizar</b>. Cero = nada digital · Parcial = algo mal armado (web, Ads, medición rota) · Avanzada = sistema propio (CRM, equipo, campañas).</p>
+    </div>
+    <div class="card table-wrap">
+      <table class="matrix combos">
+        <thead><tr><th></th><th>Escenario</th><th>Delegación</th><th>Madurez</th><th>Compra</th><th>Camino</th></tr></thead>
+        <tbody>
+          <tr><td class="n1">A</td><td>Dueño, cero digital, quiere delegar</td><td>Delegador</td><td>Cero</td><td>Decisor</td><td><span class="opt o1">1</span></td></tr>
+          <tr><td class="n1">B</td><td>Ya invierte, cansado de agencias</td><td>Delegador</td><td>Parcial</td><td>Decisor</td><td><span class="opt o1">1</span></td></tr>
+          <tr><td class="n1">C</td><td>No decide solo</td><td>Delegador</td><td>Cero / Parcial</td><td>Intermediario / Grupo</td><td><span class="opt o1">1</span></td></tr>
+          <tr><td class="n2">D</td><td>Dueño técnico, opera solo</td><td>Híbrido</td><td>Avanzada</td><td>Decisor</td><td><span class="opt o2">2</span></td></tr>
+          <tr><td class="n2">E</td><td>Gerente de marketing</td><td>Híbrido</td><td>Avanzada</td><td>Intermediario</td><td><span class="opt o2">2</span></td></tr>
+          <tr><td class="n2">F</td><td>Grupo multi-unidad</td><td>Híbrido</td><td>Parcial / Avanzada</td><td>Grupo</td><td><span class="opt o2">2</span></td></tr>
+          <tr><td class="n3">G</td><td>Lo quiere manejar solo</td><td>Autónomo</td><td>Cualquiera</td><td>Decisor</td><td><span class="opt o3">3</span></td></tr>
+          <tr><td class="n0">H</td><td>Pide contenido, un solo proveedor</td><td>Delegador</td><td>Cualquiera</td><td>Cualquiera</td><td><span class="opt">Filtro</span></td></tr>
+          <tr><td class="n0">I</td><td>Nicho sin búsquedas</td><td>Cualquiera</td><td>Cero</td><td>Cualquiera</td><td><span class="opt">Fuera</span></td></tr>
+          <tr><td class="n0">J</td><td>Web rota, sin accesos</td><td>Cualquiera</td><td>Parcial</td><td>Cualquiera</td><td><span class="opt">Prerrequisito</span></td></tr>
+          <tr><td class="n0">K</td><td>IA sobre 12 vendedores</td><td>Híbrido</td><td>Avanzada</td><td>Decisor</td><td><span class="opt">Scale</span></td></tr>
+          <tr><td class="n2">L</td><td>E-commerce con pauta fuerte</td><td>Híbrido</td><td>Avanzada</td><td>Decisor</td><td><span class="opt o2">2</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid g2">
+
+    <article class="card esc" data-c="1">
+      <div class="esc-head"><span class="esc-n">A</span><h3>Dueño decisor, cero digital, quiere delegar todo</h3><span class="tag">Camino 1</span></div>
+      <p><b>Cómo se ve:</b> taller, fábrica o servicio de 4 a 20 personas que vive de referidos. "No tengo idea cuánto invertir." Puede atender 5 a 10 consultas por mes, no 50.</p>
+      <p><b>Qué hacer:</b> obra chica (medición + 1 plataforma + 3 campañas) y operación mínima. Dar el número completo en la call, con pauta sugerida y leads esperados a su capacidad. Suite en 3 minutos como panel. Segunda reunión con fecha antes de cortar.</p>
+      <p class="num"><b>Orientativo:</b> obra ≈ 1.390 MX / 860 LATAM · operación ≈ 400 / 240 por mes · MB Suite 79. Pauta sugerida aparte.</p>
+      <p class="cases">Casos: Salazar, Guarderas, Ruiz, Maqsat.</p>
+    </article>
+
+    <article class="card esc" data-c="1">
+      <div class="esc-head"><span class="esc-n">B</span><h3>Dueño decisor, ya invierte con agencia, cansado, quiere delegar</h3><span class="tag">Camino 1</span></div>
+      <p><b>Cómo se ve:</b> pauta activa (USD 300 a 1.500 por mes), tuvo 2 a 5 agencias, "nadie analiza, los reportes no dicen nada", leads mal calificados. Sin contrato con el proveedor actual.</p>
+      <p><b>Qué hacer:</b> diagnóstico sin cargo sobre sus cuentas → revisión de medición + reestructura de campañas como obra → operación. Argumento central: las cuentas son tuyas y todo queda documentado, "si te vas, te llevás el sistema". Pedir accesos en la call.</p>
+      <p class="num"><b>Orientativo:</b> obra ≈ 1.150 MX / 710 LATAM (revisión de medición + setup 5 campañas) · operación ≈ 500 / 300 por mes.</p>
+      <p class="cases">Casos: Gonzalo García, Gini, Cynthia Leal, Emilio García, Abelardo.</p>
+    </article>
+
+    <article class="card esc" data-c="1">
+      <div class="esc-head"><span class="esc-n">C</span><h3>No decide solo: intermediario, gerente nuevo o hermanos</h3><span class="tag">Camino 1</span></div>
+      <p><b>Cómo se ve:</b> quien habla tiene que "presentarlo" a los socios, al padre o a la gerencia. No tiene número de presupuesto. Se sorprende con la cotización ("un poco más de lo que pensaba").</p>
+      <p><b>Qué hacer:</b> no cotizar a ciegas. Pedir una segunda reunión con el decisor presente, u ofrecer material corto para esa reunión interna (una hoja con el número y qué queda como activo). Si igual hay que cotizar: obra chica en dos pagos. Sin decisor en la mesa la propuesta entra en un embudo sin fecha.</p>
+      <p class="num"><b>Regla:</b> propuesta formal recién cuando el decisor escuchó el número una vez.</p>
+      <p class="cases">Casos: Gremsa, Celeste, Urgilez, Portocarrero.</p>
+    </article>
+
+    <article class="card esc" data-c="2">
+      <div class="esc-head"><span class="esc-n">D</span><h3>Dueño técnico que opera solo, tiene web y CRM, quiere control</h3><span class="tag">Camino 2</span></div>
+      <p><b>Cómo se ve:</b> maneja Ads él mismo o con una persona, usa Odoo / n8n / ChatGPT, se quemó con freelancers. Pregunta "qué hacen ustedes y qué hacemos nosotros" y "qué pasa con las cuentas si dejo".</p>
+      <p><b>Qué hacer:</b> "mostrame qué tenés". Obra completa: medición desde cero, cuentas separadas por dominio, estructura de 2 plataformas, integraciones con su CRM. Operación por 3 meses con sesión de traspaso, salida a MB Suite con su equipo. Formato: diagnóstico → arquitectura → números.</p>
+      <p class="num"><b>Orientativo:</b> obra ≈ 2.100 a 3.000 MX / 1.300 a 1.900 LATAM (según landing y plataformas) · operación 3 meses ≈ 500 a 750 / 300 a 450 · traspaso 200 / 130 · Suite 79.</p>
+      <p class="cases">Casos: Kike Torres, Ares Habib, Alarco, Galindo, Pablo Gutiérrez.</p>
+    </article>
+
+    <article class="card esc" data-c="2">
+      <div class="esc-head"><span class="esc-n">E</span><h3>Gerente de marketing con presupuesto, decide el directorio</h3><span class="tag">Camino 2</span></div>
+      <p><b>Cómo se ve:</b> hay USD 2.000 a 3.000 por mes o intención de subir. Equipo o plan 360, hacen contenido interno. Pide auditoría "para tener sustento". Quiere CRM, bot de WhatsApp, saber de qué canal vino cada lead.</p>
+      <p><b>Qué hacer:</b> auditoría paga como obra de entrada (le da el documento que necesita para vender hacia arriba) → Growth con módulos. Ofrecer participar de la reunión interna. La Suite se vende como integración con lo que ya tiene, no como reemplazo. Ciclo largo: fijar hitos, no esperar.</p>
+      <p class="num"><b>Orientativo:</b> auditoría 300 / 150 a 180 por plataforma · después obra de medición + módulos según hallazgos · Growth 2.000 a 5.000 por mes.</p>
+      <p class="cases">Casos: Luvegi, TMT, Visa Group.</p>
+    </article>
+
+    <article class="card esc" data-c="2">
+      <div class="esc-head"><span class="esc-n">F</span><h3>Grupo con varias unidades que negocia por ROI</h3><span class="tag">Camino 2</span></div>
+      <p><b>Cómo se ve:</b> dos o tres marcas o líneas, equipo técnico propio, habla de tasa de cierre y ticket. Pide bonificar la segunda empresa o bajar de 5 a 3 campañas. Quiere probar con una unidad para demostrar internamente.</p>
+      <p><b>Qué hacer:</b> obra chica por unidad, arrancar con la que tiene más búsqueda, escalonar las demás. Suite multi-negocio como argumento de consolidación (todo en un solo panel). Achicar alcance antes que descontar: 5 → 3 campañas cerró; 50% de descuento erosiona. Crear cuentas en la misma call si están.</p>
+      <p class="num"><b>Orientativo:</b> por unidad, obra ≈ 860 a 1.390 · operación ≈ 240 a 400 por mes · Suite una sola (79) para todas las unidades.</p>
+      <p class="cases">Casos: Elemetic / Corta / Almaera, Cepedas, Víctor Manuel.</p>
+    </article>
+
+    <article class="card esc" data-c="3">
+      <div class="esc-head"><span class="esc-n">G</span><h3>Quiere hacerlo solo y pregunta cuánto sale la plataforma</h3><span class="tag">Camino 3</span></div>
+      <p><b>Cómo se ve:</b> ya toca las herramientas o tiene a alguien que las va a tocar. No va a pagar 500 por mes. Pregunta por MB Suite antes que por el servicio, o llegó por el canal directo.</p>
+      <p><b>Qué hacer:</b> derivar a Fede y Santi. Alta con tarjeta primero; recién ahí el setup bonificado (medición + 1 plataforma, no 5 campañas). Mensaje: "no te damos solo una plataforma, te ayudamos a dejarla funcionando". Dejar la puerta abierta: si un día quiere delegar, MediaBros retoma sobre lo mismo.</p>
+      <p class="num"><b>Orientativo:</b> Suite 79 con cupón / 97 · setup bonificado (valor de lista ≈ 1.150 MX / 710 LATAM) solo con débito activo.</p>
+      <p class="cases">Casos: los Hacedores que decidieron no delegar nada; altas directas en mb-suite.com.</p>
+    </article>
+
+    <article class="card esc" data-c="0">
+      <div class="esc-head"><span class="esc-n">H</span><h3>Pide contenido y redes, y no quiere dos proveedores</h3><span class="tag">Filtro</span></div>
+      <p><b>Cómo se ve:</b> "¿ustedes hacen los posteos, los videos, las creatividades?" Compara con una propuesta de agencia de redes que tiene en paralelo.</p>
+      <p><b>Qué hacer:</b> decirlo claro en el minuto uno: hacemos el sistema de captación, no la grilla de posteos. Ofrecer partner de contenido o producción con IA para piezas de campaña. Si insiste en un solo proveedor para todo, no forzar: se enfría igual y consume horas.</p>
+      <p class="num"><b>Regla:</b> nombrar qué queda como activo propio (cuentas, medición, campañas, sitio) para que no compare manzanas con posteos.</p>
+      <p class="cases">Casos: Strube, Gottero, Patfood (propuesta de contenido en paralelo).</p>
+    </article>
+
+    <article class="card esc" data-c="0">
+      <div class="esc-head"><span class="esc-n">I</span><h3>Nicho sin búsquedas, o unipersonal</h3><span class="tag">Fuera de perfil</span></div>
+      <p><b>Cómo se ve:</b> turbinas, alimento congelado para mascotas, SaaS recién nacido, consultor solo. "¿Alguien busca esto en Google?" Necesita educar al mercado, no captar demanda.</p>
+      <p><b>Qué hacer:</b> decirlo antes que el cliente. Sin búsqueda, la ruta es LinkedIn / ABM / contenido con plazos distintos, o MB Suite sola + una consultoría puntual. No armar equipo dedicado ni vender una obra sobre una proyección de leads que no se va a cumplir.</p>
+      <p class="num"><b>Orientativo:</b> consultoría 200 / 130 la sesión · Suite 79. Nada más hasta que haya señal de demanda.</p>
+      <p class="cases">Casos: Patfood, IMHP, Cadena, Gallardo.</p>
+    </article>
+
+    <article class="card esc" data-c="0">
+      <div class="esc-head"><span class="esc-n">J</span><h3>Web sin terminar, sin accesos o dominio ajeno</h3><span class="tag">Prerrequisito</span></div>
+      <p><b>Cómo se ve:</b> el sitio lo tiene un desarrollador externo que no responde, no hay Tag Manager, el dominio está a nombre de otro, hay tres dominios para tres marcas.</p>
+      <p><b>Qué hacer:</b> la obra empieza por ahí: recuperación de accesos, o sitio nuevo si es más rápido que arreglar el viejo (Ares lo decidió en la call). No lanzar campañas sobre una web rota. Es la mejor justificación de una obra cobrada por adelantado: es trabajo que queda aunque nunca contrate operación.</p>
+      <p class="num"><b>Orientativo:</b> puesta a punto de activos 800 / 500 · sitio institucional o landing 900 / 550, en dos pagos si el ticket asusta.</p>
+      <p class="cases">Casos: Zevallos, Ares Habib, Cadena, Torres.</p>
+    </article>
+
+    <article class="card esc" data-c="0">
+      <div class="esc-head"><span class="esc-n">K</span><h3>"Tengo 12 vendedores y quiero que una IA clasifique los leads"</h3><span class="tag">Scale</span></div>
+      <p><b>Cómo se ve:</b> recibe leads por WhatsApp, quiere que se clasifiquen, consulten el ERP y hagan seguimiento solos. El problema no entra en ningún paquete.</p>
+      <p><b>Qué hacer:</b> no cotizar en la call. Tomar el requerimiento, pasarlo a Pablo y Fer, volver con un proyecto a medida (infraestructura + IA + marketing). No mencionarlo como "nivel" ni mostrarlo en materiales al cliente.</p>
+      <p class="num"><b>Regla:</b> proyecto, alcance escrito, precio propio. La obra estándar puede ser la fase 1 mientras se define el resto.</p>
+      <p class="cases">Escenario de la conversación de definición; todavía sin caso cerrado en las calls analizadas.</p>
+    </article>
+
+    <article class="card esc" data-c="2">
+      <div class="esc-head"><span class="esc-n">L</span><h3>E-commerce que ya gasta fuerte en Meta y quiere ROAS</h3><span class="tag">Camino 2</span></div>
+      <p><b>Cómo se ve:</b> tienda online con USD 5.000 a 20.000 de pauta, equipo o agencia de creativos, catálogo grande. Sabe leer ROAS, no sabe si su medición es confiable.</p>
+      <p><b>Qué hacer:</b> entra al mismo clasificador, no a una oferta aparte. Obra técnica: GA4 e-commerce, Merchant Center, feeds, píxel + CAPI, estructura PMax / Advantage+. Sin operación creativa: los creativos siguen siendo de ellos o de su partner. Probar 90 días antes de abrir el canal en serio.</p>
+      <p class="num"><b>Orientativo:</b> revisión de medición 400 / 250 + setup por plataforma 350 / 210 + campañas · operación opcional. Sin equipo → escenario A o B; autónomo → escenario G.</p>
+      <p class="cases">Sin casos en las 36 calls (todas B2B). Es el vertical que Fer quiere reabrir.</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- 4. PRECIO -->
 <section id="precio">
-  <div class="sec-head"><span class="n">03</span><div><h2>Reglas de precio</h2><p class="muted">Cobramos por el valor de construir el sistema, no por las horas que tarda el equipo. Si el agente hace en 3 horas lo que antes llevaba 30, el cliente recibe el mismo activo. Ese margen es el premio por haber automatizado.</p></div></div>
+  <div class="sec-head"><span class="n">04</span><div><h2>Reglas de precio</h2><p class="muted">Cobramos por el valor de construir el sistema, no por las horas que tarda el equipo. Si el agente hace en 3 horas lo que antes llevaba 30, el cliente recibe el mismo activo. Ese margen es el premio por haber automatizado.</p></div></div>
 
   <div class="compare">
     <div class="col win">
@@ -408,7 +567,7 @@
 
 <!-- 4. SEÑALES -->
 <section id="senales">
-  <div class="sec-head"><span class="n">04</span><div><h2>Señales de calidad del lead</h2><p class="muted">Lo que separó a los que avanzaron de los que se enfriaron en 36 calls. Sirve para decidir cuánto esfuerzo poner en la propuesta.</p></div></div>
+  <div class="sec-head"><span class="n">05</span><div><h2>Señales de calidad del lead</h2><p class="muted">Lo que separó a los que avanzaron de los que se enfriaron en 36 calls. Sirve para decidir cuánto esfuerzo poner en la propuesta.</p></div></div>
   <div class="grid g2">
     <div class="sig good">
       <h4>Avanza</h4>
@@ -437,7 +596,7 @@
 
 <!-- 5. OBJECIONES -->
 <section id="objeciones">
-  <div class="sec-head"><span class="n">05</span><div><h2>Objeciones que se repiten y cómo responderlas</h2><p class="muted">En orden de frecuencia.</p></div></div>
+  <div class="sec-head"><span class="n">06</span><div><h2>Objeciones que se repiten y cómo responderlas</h2><p class="muted">En orden de frecuencia.</p></div></div>
   <div class="card table-wrap">
     <table class="obj">
       <thead><tr><th>Lo que dice el cliente</th><th>Qué hay detrás</th><th>Respuesta</th></tr></thead>
@@ -459,7 +618,7 @@
 
 <!-- 6. CÓMO SE HACE LA CALL -->
 <section id="call">
-  <div class="sec-head"><span class="n">06</span><div><h2>La primera reunión, según sofisticación</h2><p class="muted">No darle la misma presentación a todos. Educar de más consume la call y desplaza la conversación sobre resultados.</p></div></div>
+  <div class="sec-head"><span class="n">07</span><div><h2>La primera reunión, según sofisticación</h2><p class="muted">No darle la misma presentación a todos. Educar de más consume la call y desplaza la conversación sobre resultados.</p></div></div>
   <div class="grid g2">
     <div class="card pad">
       <div class="kicker">Prospecto poco sofisticado (Camino 1)</div>
@@ -490,7 +649,7 @@
 
 <!-- 7. E-COMMERCE Y PILARES -->
 <section id="ecommerce">
-  <div class="sec-head"><span class="n">07</span><div><h2>E-commerce y los tres pilares</h2></div></div>
+  <div class="sec-head"><span class="n">08</span><div><h2>E-commerce y los tres pilares</h2></div></div>
   <div class="grid g2">
     <div class="card pad">
       <div class="kicker">E-commerce es un vertical, no un producto</div>
