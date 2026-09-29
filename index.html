@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="mediabros-logo.svg">
+<title>Guía comercial MediaBros Q4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5F7FA; --paper:#FFFFFF; --ink:#0F1C2E; --ink-2:#3B4A5F; --ink-3:#6B7A90; --line:#E3E8EF;
+    --navy:#0F2A44; --blue:#1E6FE8; --blue-soft:#EAF1FD;
+    --c1:#7C3AED; --c1-soft:#F3EEFD;   /* Hacémelo · gestionada */
+    --c2:#1E6FE8; --c2-soft:#EAF1FD;   /* Mejorame · acompañada */
+    --c3:#0E9F6E; --c3-soft:#E7F7F0;   /* Lo manejo yo · autónoma */
+    --warn:#B45309; --warn-soft:#FEF3E2; --bad:#B42318; --bad-soft:#FDECEC;
+    --r:14px; --shadow:0 1px 2px rgba(15,28,46,.05),0 8px 24px -12px rgba(15,28,46,.12);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--blue)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px 80px}
+  h1,h2,h3,h4{margin:0;line-height:1.2;letter-spacing:-.01em}
+  h2{font-size:26px;font-weight:800;color:var(--navy)}
+  h3{font-size:18px;font-weight:700}
+  p{margin:0}
+  .muted{color:var(--ink-3)}
+  .small{font-size:13px}
+  section{margin-top:56px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:18px}
+  .sec-head .n{font-size:13px;font-weight:700;color:var(--blue);letter-spacing:.08em;text-transform:uppercase}
+  .sec-head p{margin-top:6px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+  .pad{padding:22px 24px}
+  .grid{display:grid;gap:18px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  @media (max-width:900px){.g3,.g2{grid-template-columns:1fr}}
+  ul{margin:8px 0 0;padding-left:18px}
+  li{margin:4px 0}
+  li::marker{color:var(--ink-3)}
+  .tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--blue-soft);color:var(--blue)}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:700;background:#FAFBFD}
+  tr:last-child td{border-bottom:0}
+  .table-wrap{overflow-x:auto}
+
+  /* Header */
+  header{padding:48px 0 28px;border-bottom:1px solid var(--line)}
+  .brand{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .brand .l{display:flex;align-items:center;gap:12px}
+  .logo{width:46px;height:46px;border-radius:50%;display:block;flex:none}
+  .brand h1{font-size:34px;font-weight:800;color:var(--navy)}
+  .brand .meta{display:flex;gap:8px;flex-wrap:wrap}
+  .brand .meta span{font-size:12px;font-weight:600;padding:5px 10px;border-radius:8px;background:#fff;border:1px solid var(--line);color:var(--ink-2)}
+  .thesis{margin-top:28px;padding:28px 32px;border-radius:var(--r);background:var(--navy);color:#fff;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+  @media (max-width:900px){.thesis{grid-template-columns:1fr}}
+  .thesis .big{font-size:28px;font-weight:800;line-height:1.25;letter-spacing:-.015em}
+  .thesis .big em{font-style:normal;color:#8FC1FF}
+  .thesis .side{font-size:14px;color:#C9D6E6;border-left:1px solid rgba(255,255,255,.18);padding-left:24px}
+  .thesis .side b{color:#fff}
+
+  /* Router */
+  .router{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch}
+  @media (max-width:900px){.router{grid-template-columns:1fr}}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow)}
+  .q .kicker{margin-bottom:8px}
+  .q .question{font-size:21px;font-weight:800;color:var(--navy);line-height:1.3}
+  .q .sub{margin-top:14px}
+  .q ol{margin:8px 0 0;padding-left:20px}
+  .q ol li{margin:6px 0}
+  .arrow{display:grid;place-items:center;color:var(--ink-3);font-size:22px}
+  .answers{display:grid;gap:12px}
+  .ans{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 16px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;text-align:left;font:inherit;color:inherit;transition:transform .12s,border-color .12s,box-shadow .12s}
+  .ans:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+  .ans .dot{width:12px;height:12px;border-radius:50%}
+  .ans .lbl{font-weight:700}
+  .ans .lbl small{display:block;font-weight:500;color:var(--ink-3);font-size:12.5px}
+  .ans .go{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+  .ans[data-c="1"]{--c:var(--c1)} .ans[data-c="2"]{--c:var(--c2)} .ans[data-c="3"]{--c:var(--c3)}
+  .ans .dot{background:var(--c)}
+  .ans.on{border-color:var(--c);background:color-mix(in srgb,var(--c) 7%,#fff)}
+
+  /* Caminos */
+  .camino{border-top:5px solid var(--c);position:relative}
+  .camino[data-c="1"]{--c:var(--c1);--soft:var(--c1-soft)}
+  .camino[data-c="2"]{--c:var(--c2);--soft:var(--c2-soft)}
+  .camino[data-c="3"]{--c:var(--c3);--soft:var(--c3-soft)}
+  .camino.dim{opacity:.38}
+  .camino .top{padding:22px 24px 16px;border-bottom:1px solid var(--line)}
+  .camino .num{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+  .camino h3{font-size:22px;font-weight:800;color:var(--navy);margin-top:4px}
+  .camino .who{margin-top:6px;color:var(--ink-2)}
+  .camino .share{position:absolute;right:20px;top:18px;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--soft);color:var(--c)}
+  .camino .block{padding:16px 24px;border-bottom:1px solid var(--line)}
+  .camino .block:last-child{border-bottom:0}
+  .camino .block .kicker{color:var(--c)}
+  .camino .sell{background:var(--soft);border-radius:10px;padding:12px 14px;margin-top:8px;font-weight:600;color:var(--navy)}
+  .camino .no{color:var(--bad)}
+  .quote{font-style:italic;color:var(--ink-2);padding-left:12px;border-left:3px solid var(--line);margin-top:8px}
+  .cases{font-size:13px;color:var(--ink-3)}
+
+  /* Precio */
+  .rule{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 18px;background:var(--paper);border:1px solid var(--line);border-radius:12px}
+  .rule .ic{width:44px;height:44px;border-radius:10px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font-weight:800}
+  .rule b{display:block;color:var(--navy)}
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media (max-width:900px){.compare{grid-template-columns:1fr}}
+  .compare .col{padding:20px 22px;border-radius:var(--r);border:1px solid var(--line);background:var(--paper)}
+  .compare .col.win{border-color:var(--c3);background:linear-gradient(180deg,#F3FBF7,#fff)}
+  .compare .col.lose{border-color:#EAD9D9;background:linear-gradient(180deg,#FDF6F6,#fff)}
+  .compare .verdict{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+  .win .verdict{color:var(--c3)} .lose .verdict{color:var(--bad)}
+  .bars{display:grid;gap:8px;margin:14px 0 6px}
+  .bar{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:center;font-size:13px}
+  .bar i{display:block;height:14px;border-radius:4px;background:var(--navy)}
+  .bar.m i{background:#9DB6D1}
+
+  /* Señales */
+  .sig{padding:18px 20px;border-radius:12px;border:1px solid var(--line);background:var(--paper)}
+  .sig.good{border-top:4px solid var(--c3)} .sig.bad{border-top:4px solid var(--bad)}
+  .sig h4{font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+  .sig.good h4{color:var(--c3)} .sig.bad h4{color:var(--bad)}
+
+  /* Objeciones */
+  .obj td:first-child{font-weight:700;color:var(--navy);width:34%}
+
+  /* Callouts */
+  .callout{padding:18px 22px;border-radius:12px;background:var(--warn-soft);border:1px solid #F5DDB8;color:#6B3F0B;display:grid;grid-template-columns:auto 1fr;gap:14px}
+  .callout .ic{font-size:20px}
+  .callout b{color:#3D2405}
+
+  footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-3);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+  @media print{
+    body{background:#fff;font-size:12px}
+    .wrap{max-width:none;padding:0 6mm}
+    .card,.q,.rule,.sig,.compare .col{box-shadow:none;break-inside:avoid}
+    section{margin-top:26px;break-inside:avoid}
+    .ans{cursor:default}
+    .camino.dim{opacity:1}
+    header{padding-top:10px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">
+    <div class="l">
+      <img class="logo" src="mediabros-logo.svg" alt="MediaBros">
+      <div>
+        <h1>Guía comercial MediaBros <span style="color:var(--blue)">Q4</span></h1>
+        <p class="muted small">Material interno · Q4 2026 · para Pablo, Rocío, Fer y Clara. No sale al cliente.</p>
+      </div>
+    </div>
+    <div class="meta">
+      <span>36 calls analizadas</span><span>Catálogo 31/08</span><span>Cotizador MB</span>
+    </div>
+  </div>
+
+  <div class="thesis">
+    <div class="big">MediaBros <em>construye el sistema</em>.<br>El cliente decide <em>cuánto quiere delegar</em>.<br>MB Suite le permite <em>conservar el control</em>.</div>
+    <div class="side">
+      <p><b>Qué cambió.</b> Ya no vendemos un abono mensual de agencia. Vendemos una <b>obra</b> (se hace una vez, queda como activo del cliente) y una <b>operación</b> opcional. MB Suite es la capa permanente.</p>
+      <p style="margin-top:10px"><b>Qué no cambió.</b> El cliente ve una sola empresa. Sin plazo mínimo. El diagnóstico inicial es sin cargo.</p>
+    </div>
+  </div>
+</header>
+
+<!-- 1. CLASIFICADOR -->
+<section id="clasificador">
+  <div class="sec-head"><span class="n">01</span><div><h2>La única pregunta que enruta</h2><p class="muted">No segmentamos por rubro, país ni plataforma. Segmentamos por cómo quiere operar el cliente después de que dejemos todo funcionando.</p></div></div>
+
+  <div class="router">
+    <div class="q">
+      <div class="kicker">Preguntar temprano en la primera reunión</div>
+      <div class="question">"¿Están buscando un equipo que se encargue de esto de punta a punta, o prefieren desarrollar la capacidad internamente y tener herramientas para gestionarlo ustedes?"</div>
+      <div class="sub">
+        <div class="kicker">Y dos más para confirmar</div>
+        <ol>
+          <li><b>¿Hoy tienen alguien interno dedicado a marketing?</b> <span class="muted">→ capacidad real de operar</span></li>
+          <li><b>¿Qué tienen funcionando actualmente?</b> <span class="muted">→ madurez y tamaño de la obra</span></li>
+        </ol>
+        <p class="small muted" style="margin-top:12px">Con tres preguntas ya sabés delegación + capacidad interna + punto de partida. Eso clasifica mejor que grande/chica, MX/AR o B2B/e-commerce.</p>
+      </div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="answers" id="answers">
+      <button class="ans" data-c="1"><span class="dot"></span><span class="lbl">"Quiero delegarlo todo"<small>No tengo equipo ni ganas de aprender esto. Quiero clientes.</small></span><span class="go">Camino 1</span></button>
+      <button class="ans" data-c="2"><span class="lbl-wrap" style="display:contents"><span class="dot"></span><span class="lbl">"Ya hago algo, ayúdenme a mejorarlo"<small>Tengo equipo, proveedor o campañas. Hay partes rotas o quiero escalar.</small></span><span class="go">Camino 2</span></span></button>
+      <button class="ans" data-c="3"><span class="dot"></span><span class="lbl">"Lo quiero manejar yo"<small>Quiero independencia y control. No quiero pagar una agencia todos los meses.</small></span><span class="go">Camino 3</span></button>
+      <p class="small muted" style="padding:4px 6px">Tocá una respuesta para resaltar su camino. <a href="#" id="reset">Ver los tres</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. LOS 3 CAMINOS -->
+<section id="caminos">
+  <div class="sec-head"><span class="n">02</span><div><h2>Los tres caminos</h2><p class="muted">Una sola estructura comercial (obra + operación opcional + MB Suite). Lo que cambia entre caminos es el peso de cada parte y cómo se hace la call.</p></div></div>
+
+  <div class="grid g3">
+
+    <!-- CAMINO 1 -->
+    <article class="card camino" data-c="1">
+      <span class="share">~40% de las calls</span>
+      <div class="top">
+        <div class="num">Camino 1 · Gestionada</div>
+        <h3>"Hacémelo"</h3>
+        <p class="who">El Delegador. PyME industrial, logística o servicios, familiar, 15 a 40 años. Sin área de marketing. Vive de referidos. Quiere que el lead le llegue al WhatsApp.</p>
+      </div>
+      <div class="block">
+        <div class="kicker">Cómo lo reconocés</div>
+        <ul>
+          <li>"No tengo idea" de presupuesto ni de cuántos leads necesita.</li>
+          <li>O ya invierte y rotó 2 a 5 agencias: "nadie analiza, los reportes no dicen nada".</li>
+          <li>Escucha la demo de MB Suite con cortesía y cero preguntas.</li>
+          <li>Decide el dueño, a veces con hermanos o socios.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <div class="kicker">Qué se vende</div>
+        <div class="sell">Obra + mantenimiento. Acá el mantenimiento es parte central: alguien tiene que seguir operando.</div>
+        <ul>
+          <li>Programa del cotizador: <b>Campañas listas</b> (puesta a punto + 1 plataforma + campañas).</li>
+          <li>Si está en cero digital: <b>obra chica</b> (1 canal, 3 campañas) y operación mínima. No cotizar 5 campañas a un taller de 4 personas.</li>
+          <li>MB Suite se presenta como <b>panel de visibilidad</b> ("ves lo que hace el equipo"), no como autonomía. Demo de 3 minutos.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <div class="kicker">Qué necesita para decir que sí</div>
+        <ul>
+          <li><b>El número</b> en la primera call: pauta sugerida + obra + operación + leads proyectados a su capacidad de atención.</li>
+          <li>Prueba social del país (testimonios MX / AR) y respuesta a "¿tienen oficinas acá?".</li>
+          <li>Segunda reunión agendada antes de cortar.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <div class="kicker no">Qué no hacer</div>
+        <ul>
+          <li>Hablar de agentes, MCP, automatizaciones, infraestructura.</li>
+          <li>Enseñar qué es un funnel durante 20 minutos. Formato: <b>problema → resultado → solución</b>.</li>
+          <li>Decir "3 a 6 meses" sin aclarar: leads desde la semana 1, calidad madura hacia el mes 3.</li>
+        </ul>
+        <p class="cases" style="margin-top:10px">Casos: Gini, Gonzalo García, Emilio García, Cynthia Leal, Guarderas, Ruiz, Abelardo, Salazar, Gremsa, Avamol, XYCA, Celeste, Maqsat.</p>
+      </div>
+    </article>
+
+    <!-- CAMINO 2 -->
+    <article class="card camino" data-c="2">
+      <span class="share">~50% de las calls</span>
+      <div class="top">
+        <div class="num">Camino 2 · Acompañada</div>
+        <h3>"Mejorame lo que ya tengo"</h3>
+        <p class="who">Ya hay algo: campañas, web, CRM, alguien interno, una agencia. Hay partes rotas o quiere escalar. Tres variantes que se venden igual pero se conversan distinto.</p>
+      </div>
+      <div class="block">
+        <div class="kicker">Las tres variantes</div>
+        <ul>
+          <li><b>El Hacedor técnico</b> (la más frecuente). Dueño o gerente que opera algo solo, usa Odoo, n8n, ChatGPT. Se quemó con freelancers. Pregunta "qué hacen ustedes y qué hacemos nosotros" y "qué pasa con las cuentas si dejo". Es al que el "te hacemos capaz" le hace clic.</li>
+          <li><b>El gerente de marketing</b> con directorio arriba. Tiene presupuesto pero necesita sustento. Pide auditoría, CRM y bot de WhatsApp. Ciclo largo.</li>
+          <li><b>El grupo multi-unidad</b>. Varias marcas, habla de ROI, pide bonificar. Quiere probar con una unidad.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <div class="kicker">Qué se vende</div>
+        <div class="sell">Diagnóstico → obra protagonista → mantenimiento verdaderamente opcional. Es un proyecto de mejora, no una externalización.</div>
+        <ul>
+          <li>"Mostrame qué tenés. Te digo qué falta y construimos esa parte." Cotización modular desde el catálogo: medición, Ads, SEO técnico, landing, CRM, automatización.</li>
+          <li>Hacedor: programa <b>Construcción y transferencia</b> (obra + 3 meses de operación + sesión de traspaso). Sale a MB Suite con su equipo.</li>
+          <li>Gerente: <b>auditoría paga</b> como obra de entrada (le da el sustento que pide) + Growth con módulos.</li>
+          <li>Grupo: obra chica <b>por unidad</b>, operación escalonada, Suite multi-negocio como argumento de consolidación. Achicar alcance antes que descontar.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <div class="kicker">Qué necesita para decir que sí</div>
+        <ul>
+          <li>Propiedad de cuentas y accesos documentados. Es su pregunta de fondo.</li>
+          <li>MB Suite como <b>integración</b> con lo que ya tiene (convive con Odoo o su CRM), no como reemplazo.</li>
+          <li>Formato de call: <b>diagnóstico → arquitectura → números → implementación</b>.</li>
+          <li>Al gerente: ofrecerle participar de la reunión interna o material para el decisor.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <div class="kicker no">Qué no hacer</div>
+        <ul>
+          <li>Venderle "la agencia entera" cuando solo necesita medición y dos campañas bien armadas.</li>
+          <li>Meter SEO junto con la obra de arranque si confunde. SEO va en fase 2.</li>
+          <li>Descontar 50% para cerrar. Se achica el alcance (5 → 3 campañas cerró Cepedas con "se me hace justo").</li>
+        </ul>
+        <p class="cases" style="margin-top:10px">Casos: Kike Torres, Pablo Gutiérrez, Galindo, Zevallos, Ares Habib, Alarco, Multialarmas · Luvegi, TMT, Visa Group · Elemetic/Almaera, Cepedas.</p>
+      </div>
+    </article>
+
+    <!-- CAMINO 3 -->
+    <article class="card camino" data-c="3">
+      <span class="share">Canal MB Suite</span>
+      <div class="top">
+        <div class="num">Camino 3 · Autónoma</div>
+        <h3>"Lo quiero manejar yo"</h3>
+        <p class="who">Quiere independencia y un costo accesible. Puede ser dueño, responsable de marketing o un Hacedor que decidió no delegar nada. No va a pagar USD 500 a 2.000 por mes.</p>
+      </div>
+      <div class="block">
+        <div class="kicker">Cómo lo reconocés</div>
+        <ul>
+          <li>Ya toca las herramientas o tiene una persona que las va a tocar.</li>
+          <li>Pregunta precios de la plataforma antes que del servicio.</li>
+          <li>Llega por el canal directo de MB Suite o lo derivamos desde una call de MediaBros.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <div class="kicker">Qué se vende</div>
+        <div class="sell">MB Suite (USD 79 con cupón / 97) + onboarding liviano. La obra chica se bonifica, con condición.</div>
+        <ul>
+          <li>Lo atienden <b>Fede y Santi</b>: mini onboarding, conectan lo necesario, dejan el entorno andando.</li>
+          <li><b>Setup bonificado solo después del alta con tarjeta.</b> Es costo de adquisición de una suscripción, no un regalo a un lead frío.</li>
+          <li>Alcance del setup bonificado: puesta a punto de medición + 1 plataforma. No 5 campañas.</li>
+          <li>Mensaje: <b>"No te damos solo una plataforma. Te ayudamos a dejarla funcionando."</b></li>
+        </ul>
+      </div>
+      <div class="block">
+        <div class="kicker">Qué necesita para decir que sí</div>
+        <ul>
+          <li>Ver que la Suite reemplaza cinco pestañas abiertas y que la configuración queda documentada.</li>
+          <li>Saber que si un día quiere delegar, MediaBros retoma sobre lo mismo. El camino es de ida y vuelta.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <div class="kicker no">Qué no hacer</div>
+        <ul>
+          <li>Demos personalizadas de una hora a quien no puso tarjeta. Prioridad de atención: <b>tarjeta → organización creada → formulario / WhatsApp</b>.</li>
+          <li>Prometer que "la IA hace las campañas". La IA asiste.</li>
+          <li>Decir "sin tarjeta": el trial de 14 días es con tarjeta.</li>
+        </ul>
+        <p class="cases" style="margin-top:10px">Revisar en 6 meses cuántos de los setups bonificados siguen suscriptos. Si no se quedan, el bono no es CAC, es regalo.</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="grid g2" style="margin-top:18px">
+    <div class="card pad">
+      <div class="kicker">Excepción, no perfil · Scale</div>
+      <h3 style="margin-top:6px">"Necesito algo que no existe"</h3>
+      <p class="muted" style="margin-top:6px">"Tengo 12 vendedores, recibo leads por WhatsApp, quiero que una IA los clasifique, consulte el ERP y haga seguimiento." Es un proyecto a medida con cotización especial. No se fuerza en ningún paquete y no se menciona como nivel en materiales al cliente.</p>
+    </div>
+    <div class="card pad">
+      <div class="kicker">Fuera de perfil</div>
+      <h3 style="margin-top:6px">Nicho sin búsquedas o unipersonal</h3>
+      <p class="muted" style="margin-top:6px">Turbinas, alimento congelado para mascotas, SaaS recién nacido, consultor solo. Google Search no sostiene la promesa de leads. Ofrecer MB Suite sola + una consultoría puntual, o proponer LinkedIn / contenido con expectativas alineadas, o derivar. No armar equipo dedicado. Rocío ya los frena bien.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PRECIO -->
+<section id="precio">
+  <div class="sec-head"><span class="n">03</span><div><h2>Reglas de precio</h2><p class="muted">Cobramos por el valor de construir el sistema, no por las horas que tarda el equipo. Si el agente hace en 3 horas lo que antes llevaba 30, el cliente recibe el mismo activo. Ese margen es el premio por haber automatizado.</p></div></div>
+
+  <div class="compare">
+    <div class="col win">
+      <div class="verdict">✓ Así cobramos</div>
+      <h3 style="margin-top:6px">Obra alta, mantenimiento bajo</h3>
+      <p class="muted small">Costos decrecientes para el cliente.</p>
+      <div class="bars">
+        <div class="bar"><span>Mes 1 (obra)</span><i style="width:100%"></i></div>
+        <div class="bar m"><span>Mes 2</span><i style="width:38%"></i></div>
+        <div class="bar m"><span>Mes 3</span><i style="width:38%"></i></div>
+        <div class="bar m"><span>Mes 4 (opcional)</span><i style="width:38%"></i></div>
+      </div>
+      <ul class="small">
+        <li>El trabajo y el valor se producen al principio: medición, cuentas, campañas, landing, integraciones.</li>
+        <li>Si se va a los 3 meses, la obra ya fue rentable por sí misma.</li>
+        <li>El mercado lo intuye: Cepedas preguntó "¿el fee no debería bajar cuando la campaña ya está afinada?". Con este modelo la respuesta es "sí, así funciona".</li>
+        <li>Relación: <b>proyecto → mantenimiento opcional</b>, en vez de "abono → ojalá no se dé de baja".</li>
+      </ul>
+    </div>
+    <div class="col lose">
+      <div class="verdict">✗ Descartado</div>
+      <h3 style="margin-top:6px">Setup barato, mensual caro</h3>
+      <p class="muted small">Costos crecientes. Es el modelo de agencia del que salimos.</p>
+      <div class="bars">
+        <div class="bar"><span>Mes 1 (setup)</span><i style="width:35%"></i></div>
+        <div class="bar m"><span>Mes 2</span><i style="width:90%"></i></div>
+        <div class="bar m"><span>Mes 3</span><i style="width:90%"></i></div>
+        <div class="bar m"><span>Mes 4</span><i style="width:90%"></i></div>
+      </div>
+      <ul class="small">
+        <li>Solo cierra con plazo mínimo, y el plazo mínimo se descartó (Free Willy). Sin plazo mínimo, se subsidia la instalación y el cliente se va antes de recuperarla.</li>
+        <li>En las 4 revisiones de propuesta el precio no fue lo que frenó. Frenaron los hermanos que aprueban, otra agencia en prueba y el sitio sin terminar.</li>
+        <li>Lo válido del argumento: la barrera de entrada del Camino 1 existe. Se resuelve con <b>obra chica</b> y <b>pago en dos partes</b>, no invirtiendo la estructura.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid g3" style="margin-top:18px">
+    <div class="rule"><div class="ic">1</div><div><b>Tres líneas nítidas, siempre</b><span class="small">Obra (una vez, MediaBros) · Operación (mensual, opcional, MediaBros) · Pauta (directo a la plataforma). Y MB Suite aparte (desde el arranque, mb-suite.com). Nunca sumadas en un total único.</span></div></div>
+    <div class="rule"><div class="ic">2</div><div><b>La obra se factura 100% adelantada</b><span class="small">Es lo que protege ante la rotación. Si el ticket asusta, dos pagos (Patfood aceptó ARS 1,24M en dos partes). Piso de primera factura: 800 MX / 500 CL.</span></div></div>
+    <div class="rule"><div class="ic">3</div><div><b>Obra chica y obra completa</b><span class="small">Chica: puesta a punto + 1 plataforma + 3 campañas. Completa: + plataformas, landing, SEO técnico, integraciones. Elegir según lo que tienen funcionando, no según cuánto queremos facturar.</span></div></div>
+    <div class="rule"><div class="ic">4</div><div><b>Achicar alcance antes que descontar</b><span class="small">Descuento máximo sin dirección: 10%, solo sobre la obra. Pasar de 5 a 3 campañas cerró; el 50% por segunda empresa erosionó valor.</span></div></div>
+    <div class="rule"><div class="ic">5</div><div><b>MB Suite nunca se descuenta ni se bonifica</b><span class="small">USD 79 / 97, débito automático, misma tarifa en todos los mercados. Es el ingreso recurrente real y lo que hace que el traspaso no sea una pérdida de información.</span></div></div>
+    <div class="rule"><div class="ic">6</div><div><b>"Gratis" solo en el Camino 3, y con tarjeta</b><span class="small">MediaBros no regala la obra. "Te hacemos todo gratis" optimiza cantidad de interesados, no calidad, y atrae al que decide por no gastar. La capacidad ociosa de los agentes se gasta en velocidad: "la obra en 2 semanas".</span></div></div>
+  </div>
+</section>
+
+<!-- 4. SEÑALES -->
+<section id="senales">
+  <div class="sec-head"><span class="n">04</span><div><h2>Señales de calidad del lead</h2><p class="muted">Lo que separó a los que avanzaron de los que se enfriaron en 36 calls. Sirve para decidir cuánto esfuerzo poner en la propuesta.</p></div></div>
+  <div class="grid g2">
+    <div class="sig good">
+      <h4>Avanza</h4>
+      <ul>
+        <li><b>El decisor está en la call</b> (dueño o socio con firma).</li>
+        <li><b>Ya invierte y sabe cuánto</b>, o tiene un número en la cabeza.</li>
+        <li><b>Dolor concreto con historia reciente</b>: "PMax nos hizo pedazos la campaña", "18 leads y 1 calificado", "la agencia en prueba no funciona".</li>
+        <li><b>Tiene accesos y control de sus activos</b> (web, cuenta de Ads, dominio).</li>
+        <li><b>Fecha de decisión explícita</b> y segunda reunión agendada en la misma call.</li>
+        <li>Pregunta <b>qué pasa con las cuentas si se va</b>: comprador sofisticado que valora el modelo.</li>
+      </ul>
+    </div>
+    <div class="sig bad">
+      <h4>Se enfría</h4>
+      <ul>
+        <li>Habla un <b>intermediario sin presupuesto</b> o alguien nuevo en la empresa.</li>
+        <li><b>"Averiguo por las dudas"</b> con proveedor actual funcionando.</li>
+        <li>Pide <b>contenido y creativos</b> y no acepta dos proveedores.</li>
+        <li>Ticket total (obra + pauta) muy por encima de su realidad <b>sin escalón intermedio</b>.</li>
+        <li><b>Web sin terminar o sin accesos</b>: la obra tiene un prerrequisito que retrasa todo.</li>
+        <li>Tiene que <b>vender internamente a terceros sin números</b> (hermanos, gerencia, fabricante que co-paga).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5. OBJECIONES -->
+<section id="objeciones">
+  <div class="sec-head"><span class="n">05</span><div><h2>Objeciones que se repiten y cómo responderlas</h2><p class="muted">En orden de frecuencia.</p></div></div>
+  <div class="card table-wrap">
+    <table class="obj">
+      <thead><tr><th>Lo que dice el cliente</th><th>Qué hay detrás</th><th>Respuesta</th></tr></thead>
+      <tbody>
+        <tr><td>"¿Cuánto tendría que invertir?" / no tiene presupuesto</td><td>Sin referencia. Casi todo el Camino 1.</td><td>Dar el número completo en la primera call: pauta sugerida, obra, operación, leads esperados según su capacidad. Si hace falta, tres escenarios (obra chica / media / completa).</td></tr>
+        <tr><td>"Ya probé y me llegaban curiosos" / leads residenciales</td><td>Calidad del lead. Es la objeción de fondo detrás de "no funcionó".</td><td>Medición de punta a punta (del anuncio a la venta), formularios que califican, exclusiones. Y CRM + bot cuando el problema es que nadie atiende.</td></tr>
+        <tr><td>"¿Ustedes hacen contenido / redes / creativos?"</td><td>El mercado espera "una agencia". Apareció en 5+ calls.</td><td>Ser claros: hacemos el sistema de captación, no la grilla de posteos. Partner de contenido o producción con IA para piezas de campaña. No perder la venta por esto.</td></tr>
+        <tr><td>"¿Por qué ustedes sí?" (tuvo 2 a 5 agencias)</td><td>Desconfianza. 6+ calls.</td><td>Las cuentas son tuyas, todo queda documentado en la Suite, sin contrato. "Si te vas, te llevás el sistema." Testimonios del país.</td></tr>
+        <tr><td>"3 a 6 meses es mucho"</td><td>Suena a esperar sin resultados.</td><td>Leads desde la semana 1 de campaña; lo que madura hacia el mes 3 es la calidad y el costo por lead.</td></tr>
+        <tr><td>"¿El fee no debería bajar cuando ya está afinado?"</td><td>El cliente pide costos decrecientes.</td><td>"Exactamente así funciona: la obra se paga una vez, después es mantenimiento."</td></tr>
+        <tr><td>"¿Y esto es aparte de la campaña?" / mezcla fee con pauta</td><td>Confusión de líneas.</td><td>Tres líneas nítidas, siempre. Pauta directo a Google/Meta con su tarjeta.</td></tr>
+        <tr><td>"Ya tenemos Odoo / CRM propio"</td><td>Miedo a una herramienta más.</td><td>La Suite es comercial y de marketing, no un ERP. Convive e integra.</td></tr>
+        <tr><td>"¿Tienen oficinas en México?" / factura desde EE.UU.</td><td>Confianza en agencia remota.</td><td>20 años, clientes en el país (nombrarlos), facturación en USD por Mediabros Online LLC, documentación de proveedor lista.</td></tr>
+        <tr><td>"¿Alguien busca esto en Google?"</td><td>Nicho sin búsquedas.</td><td>Decirlo antes que el cliente: si no hay búsqueda, la ruta es LinkedIn / ABM / contenido, con expectativas de plazo distintas. O Suite sola.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 6. CÓMO SE HACE LA CALL -->
+<section id="call">
+  <div class="sec-head"><span class="n">06</span><div><h2>La primera reunión, según sofisticación</h2><p class="muted">No darle la misma presentación a todos. Educar de más consume la call y desplaza la conversación sobre resultados.</p></div></div>
+  <div class="grid g2">
+    <div class="card pad">
+      <div class="kicker">Prospecto poco sofisticado (Camino 1)</div>
+      <h3 style="margin-top:6px">Problema → resultado → solución</h3>
+      <ul>
+        <li>5 min: qué vende, a quién, cómo llegan hoy los clientes, cuántos podría atender.</li>
+        <li>10 min: qué pasaría con X leads por mes. El número.</li>
+        <li>10 min: cómo lo armamos (obra), quién lo opera (nosotros), qué ve él (la Suite en 3 minutos).</li>
+        <li>Cierre: segunda reunión con propuesta, fecha fija.</li>
+      </ul>
+    </div>
+    <div class="card pad">
+      <div class="kicker">Prospecto sofisticado (Camino 2 y 3)</div>
+      <h3 style="margin-top:6px">Diagnóstico → arquitectura → números → implementación</h3>
+      <ul>
+        <li>"Mostrame qué tenés": cuentas, medición, web, CRM, quién opera.</li>
+        <li>Qué falta y por qué, con lenguaje técnico si lo pide.</li>
+        <li>Cotización modular de la obra, operación opcional, Suite como integración.</li>
+        <li>Cierre: crear cuentas o accesos en la misma call si es posible (Elemetic).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout" style="margin-top:18px">
+    <div class="ic">⚠️</div>
+    <div><b>Lo que mostraron las calls de julio y agosto:</b> el pitch seguía siendo "equipo dedicado mensual + Suite". La palabra <i>obra</i> casi no apareció y 3 de las 4 revisiones de propuesta se cotizaron con el fee mensual viejo. El modelo nuevo existe en el cotizador pero todavía no se está vendiendo en la primera reunión. Esta guía es para cerrar esa brecha.</div>
+  </div>
+</section>
+
+<!-- 7. E-COMMERCE Y PILARES -->
+<section id="ecommerce">
+  <div class="sec-head"><span class="n">07</span><div><h2>E-commerce y los tres pilares</h2></div></div>
+  <div class="grid g2">
+    <div class="card pad">
+      <div class="kicker">E-commerce es un vertical, no un producto</div>
+      <p style="margin-top:8px">Fer puede volver a prospectar e-commerce porque la capacidad operativa cambió. Pero no se arma "MediaBros E-commerce" ni una promo aparte. Entra al mismo clasificador:</p>
+      <ul>
+        <li>E-commerce sin equipo → Camino 1.</li>
+        <li>E-commerce que ya gasta USD 20.000 en Meta y quiere ROAS → Camino 2, con obra técnica (GA4 e-commerce, Merchant Center, feeds, píxel + CAPI, estructura PMax / Advantage+).</li>
+        <li>E-commerce autónomo → Camino 3.</li>
+      </ul>
+      <p class="small muted" style="margin-top:10px">Ojo: es otro comprador (creativos, catálogo, contenido). La objeción "no hacen contenido" pesa más. Probar 90 días con obra técnica antes de abrir el canal.</p>
+    </div>
+    <div class="card pad">
+      <div class="kicker">Los tres pilares desembocan en el mismo clasificador</div>
+      <ul style="margin-top:8px">
+        <li><b>Contenido</b> atrae los problemas de cada camino, no los servicios. MediaBros habla de negocio y resultados ("gastás en Google y nadie sabe qué lead terminó en cliente", "una agencia no debería quedarse con tus campañas cuando te vas"). MB Suite habla desde la operación del marketer ("cómo manejar marketing sin cinco herramientas abiertas").</li>
+        <li><b>Leads</b>: outbound de Clara, orgánico, Google, Meta, LinkedIn, reactivación de la base 2023 a 2025, e-commerce. Todos llegan a la misma primera reunión.</li>
+        <li><b>Metodología comercial</b>: esta guía. Si mañana llegan 100 leads y hay 15 formas de cotizarlos, vuelve el caos.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="mediabros-isologo.svg" alt="MediaBros LATAM" style="height:26px;width:auto;opacity:.85">
+  <span>Guía comercial MediaBros Q4 · 29/09/2026 · Fuentes: 36 notas de Gemini de calls (jul–sep 2026 y feb–abr 2026), catálogo del 31/08, Guía comercial del Cotizador MB, conversación de definición del 29/09.</span>
+  <span>Fichas por call: 01-mediabros/ventas/perfiles-clientes-2026-09/</span>
+</footer>
+
+</div>
+<script>
+  const btns=[...document.querySelectorAll('.ans')];
+  const cards=[...document.querySelectorAll('.camino')];
+  function pick(c){
+    btns.forEach(b=>b.classList.toggle('on',b.dataset.c===c));
+    cards.forEach(k=>k.classList.toggle('dim',c&&k.dataset.c!==c));
+    if(c){const t=document.querySelector('.camino[data-c="'+c+'"]');t&&t.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+  btns.forEach(b=>b.addEventListener('click',()=>pick(b.dataset.c)));
+  document.getElementById('reset').addEventListener('click',e=>{e.preventDefault();pick(null);});
+</script>
+</body>
+</html>
